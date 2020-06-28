@@ -1,0 +1,11 @@
+{
+  "name": "schmedule_client",
+  "version": "1.0.0",
+  "description": "This is the client app for the schmedule electron app.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Christin Morton",
+  "license": "ISC"
+}
