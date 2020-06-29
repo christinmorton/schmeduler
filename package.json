@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "electron .",
-    "watch": "nodemon --exec 'electron .'",
+    "watch": "nodemon --exec electron .",
     "debug": "electron --inspect=5858 .",
     "dev": "webpack-dev-server --env.env=dev --watch",
     "watch:prod": "webpack --env.env=prod --watch",
@@ -48,6 +48,7 @@
     "babel-plugin-handlebars-inline-precompile": "^2.1.1",
     "delete": "^1.1.0",
     "dotenv": "^8.2.0",
+    "electron-window-state": "^5.0.3",
     "handlebars": "^4.7.6",
     "handlebars-loader": "^1.7.1",
     "handlebars-template-loader": "^1.0.0",

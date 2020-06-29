@@ -1,3 +1,4 @@
+const path = require('path');
 const commonPaths = require('./modules/common-paths');
 
 console.log(commonPaths.outputPath);
@@ -18,7 +19,11 @@ const config = {
             loader: 'babel-loader',
           },
         ],
-        exclude: [/node_modules/, /app.js/],
+        exclude: [
+          path.resolve(__dirname, 'node_modules/'),
+          path.resolve(__dirname, 'app.js'),
+          path.resolve(__dirname, 'src/'),
+        ],
       },
     ],
   },
