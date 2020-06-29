@@ -4,8 +4,48 @@
   "description": "This is the client app for the schmedule electron app.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "concurrently \"npm run dev\" \"npm run json:server\"",
+    "dev": "webpack-dev-server --env.env=dev --watch",
+    "watch:prod": "webpack --env.env=prod --watch",
+    "build:dev": "webpack --env.env=dev",
+    "build": "webpack",
+    "webpack-dev-server": "webpack-dev-server --env.env=dev"
   },
   "author": "Christin Morton",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@babel/register": "^7.10.1",
+    "babel-loader": "^8.1.0",
+    "babelify": "^10.0.0",
+    "browserify": "^16.5.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "concurrently": "^5.2.0",
+    "copy-webpack-plugin": "^6.0.2",
+    "css-loader": "^3.5.3",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "mini-css-extract-plugin": "^0.9.0",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
+    "style-loader": "^1.2.1",
+    "url-loader": "^4.1.0",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11",
+    "webpack-dev-middleware": "^3.7.2",
+    "webpack-dev-server": "^3.11.0",
+    "webpack-merge": "^4.2.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.10.2",
+    "autoprefixer": "^9.8.0",
+    "babel-plugin-handlebars-inline-precompile": "^2.1.1",
+    "delete": "^1.1.0",
+    "dotenv": "^8.2.0",
+    "handlebars": "^4.7.6",
+    "handlebars-loader": "^1.7.1",
+    "handlebars-template-loader": "^1.0.0"
+  }
 }
